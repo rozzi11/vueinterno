@@ -1,0 +1,17 @@
+.logo {
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+  &-img {
+    fill: $accentColor;
+  }
+  &-title {
+    margin-left: 10px;
+    text-transform: uppercase;
+    color: $titleTxtColor;
+    @include dmSerif(40px, 125%, normal);
+  }
+  &:hover p {
+    color: $accentColor;
+  }
+}

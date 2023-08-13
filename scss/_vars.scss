@@ -1,0 +1,21 @@
+$borderColor: #e6e6e6;
+$accentColor: #CDA274;
+$accentBGColor: #F4F0EC;
+$titleTxtColor: #292F36;
+$textColor: #4D5053;
+
+@mixin jost($size, $weight, $height, $spacing){
+	font-family: Jost;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height; 
+    letter-spacing: $spacing;
+}
+
+@mixin dmSerif($size, $height, $spacing){
+	font-family: DM Serif Display;
+    font-size: $size;
+    font-weight: 400;
+    line-height: $height; 
+    letter-spacing: $spacing;
+}

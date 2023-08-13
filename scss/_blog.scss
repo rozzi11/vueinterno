@@ -1,0 +1,89 @@
+.blog {
+  padding: 96px 0;
+  &__title {
+    @include dmSerif(50px, 125%, 1px);
+    color: $titleTxtColor;
+    text-align: center;
+  }
+  &__text {
+    color: $textColor;
+    @include jost(22px, 400, 150%, 0.22px);
+    max-width: 811px;
+    width: 100%;
+    margin: 12px auto 52px auto;
+    text-align: center;
+  }
+  &_list {
+    display: flex;
+    justify-content: space-between;
+		align-items: stretch;
+    flex-wrap: wrap;
+  }
+  &__item {
+    padding: 21px;
+    border: 1px solid $borderColor;
+    border-radius: 62px;
+    transition: all 0.3s;
+		background-color: #fff;
+    &:hover {
+      background-color: $accentBGColor;
+      & .blog__link {
+        background-color: #fff;
+      }
+    }
+  }
+  &__img {
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    &-wrp {
+      position: relative;
+    }
+  }
+  &__tags {
+    position: absolute;
+    width: 135px;
+    padding: 4px 0 8px 11px;
+    background-color: #fff;
+    border-radius: 8px 8px 8px 0;
+    z-index: 2;
+    left: 20px;
+    bottom: 20px;
+    color: $textColor;
+    @include jost(16px, 400, 29px, 0.16px);
+  }
+  &__description {
+    @include dmSerif(25px, 125%, 0.5px);
+    color: $titleTxtColor;
+    max-width: 305px;
+    width: 100%;
+    margin-top: 15px;
+    text-align: left;
+  }
+  &__data {
+    margin-top: 26px;
+    @include jost(16px, 400, 150%, 0.16px);
+    color: $textColor;
+  }
+  &__link {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: $accentBGColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: stroke 0.3s;
+    & path {
+      stroke: $titleTxtColor;
+    }
+    &:hover path {
+      stroke: $accentColor;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+  }
+}

@@ -1,0 +1,78 @@
+.project {
+  padding: 96px 0;
+  text-align: center;
+  &__title {
+    color: $titleTxtColor;
+    @include dmSerif(50px, 125%, 1px);
+    text-transform: capitalize;
+  }
+  &__text {
+    color: $textColor;
+    @include jost(22px, 400, 150%, 0.22px);
+    max-width: 737px;
+    width: 100%;
+    margin: 8px auto 93px auto;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 104px;
+    row-gap: 54px;
+		& li:nth-child(4n-3) img{
+			border-top-right-radius: 80px;
+		}
+		& li:nth-child(4n-2) img{
+			border-top-left-radius: 80px;
+		}
+		& li:nth-child(4n-1) img{
+			border-bottom-right-radius: 80px;
+		}
+		& li:nth-child(4n) img{
+			border-bottom-left-radius: 80px;
+		}
+  }
+  &__card {
+    &-img {
+      max-width: 548px;
+      width: 100%;
+      height: auto;
+    }
+    &-description {
+			margin-top: 24px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+    }
+    &-title {
+			text-align: left;
+			color: $titleTxtColor;
+			@include dmSerif(25px, 125%, 0.5px);
+    }
+    &-text {
+			margin-top: 4px;
+			color: $textColor;
+			@include jost(22px, 400, 150%, 0.22px);
+    }
+    &-link {
+			display: block;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background-color: $accentBGColor;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: all .3s;
+			& path{
+				stroke: $titleTxtColor;
+			}
+			&:hover{
+				background-color: white;
+				border: 1px solid $accentColor;
+				& path{
+				stroke: $accentColor;
+				}
+			}
+    }
+  }
+}

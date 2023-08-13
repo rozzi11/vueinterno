@@ -1,0 +1,11 @@
+.pages {
+  &-item a {
+		@include jost(20px, 400, 125%, normal);
+		color: $titleTxtColor;
+		text-transform: capitalize;
+		transform: color .3s;
+		&:hover{
+			color: $accentColor;
+		}
+  }
+}
